@@ -1,0 +1,52 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:3.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web:3.0.1'
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.1'
+	implementation 'com.shedhack.requestbody:cache-filter:2.2.0'
+	implementation 'com.shedhack.requestbody:cache-interceptor:2.2.0'
+
+
+
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web:3.0.1'
+	implementation 'io.leopard.boot:leopard-boot-requestbody:0.9.20'
+	implementation 'com.shedhack.requestbody:cache-filter:2.2.0'
+	implementation 'com.shedhack.requestbody:cache-interceptor:2.2.0'
+	implementation 'io.github.dzw1113:multirequest:1.0.1'
+	implementation 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+	implementation 'org.ligboy.retrofit2:converter-fastjson-parent:2.1.0'
+	implementation 'org.ligboy.retrofit2:converter-fastjson:2.1.0'
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.1'
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
